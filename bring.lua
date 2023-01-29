@@ -1,5 +1,3 @@
-getgenv().hostusername = "Liam22443"
-
 local host = game.Players[getgenv().hostusername]
 
 local Target
