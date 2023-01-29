@@ -1,5 +1,4 @@
-local host = "idealcrime"
-host = game.Players[host]
+local host = game.Players[getgenv().hostusername]
 
 local Target
 
