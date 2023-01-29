@@ -30,7 +30,7 @@ local function SN(text)
         end
     end
 end
-local save = getgenv().hostusername
+local save = tostring(getgenv().hostusername)
 host.Chatted:Connect(function(msg)
     local args = string.split(msg, " ")
     if args[1] == "!bring" then
