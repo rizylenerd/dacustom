@@ -1,4 +1,3 @@
-getgenv().hostusername = "Liam22443"
 
 if not game:IsLoaded() then
     game.Loaded:Wait()
