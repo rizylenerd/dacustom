@@ -1,6 +1,9 @@
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
+repeat
+    wait()
+until game.Players:FindFirstChild(getgenv().hostusername)
 local host = game.Players[getgenv().hostusername]
 
 local Target
@@ -18,9 +21,6 @@ local Local = {
     Id = Services.Players.LocalPlayer.UserId,
     Backpack = Services.Players.LocalPlayer.Backpack
 }
-repeat
-    wait()
-until game:IsLoaded()
 
 local function SN(text)
     for i, v in pairs(Services.Players:GetChildren()) do
