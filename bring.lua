@@ -28,7 +28,7 @@ local function SN(text)
         end
     end
 end
-
+local save = getgenv().hostusername
 host.Chatted:Connect(function(msg)
     local args = string.split(msg, " ")
     if args[1] == "!bring" then
@@ -52,9 +52,8 @@ host.Chatted:Connect(function(msg)
                     v:Destroy()
                 end
             end
-            local qnt = queue_on_teleport or syn and syn.queue_on_teleport [[
-       repeat wait() until game:IsLoaded() wait(5)
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()]]
+            local qnt = queue_on_teleport or syn and
+                            syn.queue_on_teleport "repeat wait() until game:IsLoaded() wait(5) getgenv().hostusername =" .. save .. "loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()"
             game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
         end
     end
