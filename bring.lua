@@ -1,5 +1,3 @@
-getgenv().hostusername = "Liam22443"
-
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -112,7 +110,8 @@ host.Chatted:Connect(function(msg)
     if #args == 2 then
         if args[1] == "!bring" then
             local Target = SN(args[2])
-            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") then
+            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                Local.Backpack:FindFirstChild("Wallet") then
                 local HumClone = Local.Player.Character.Humanoid:Clone()
                 HumClone.Parent = Local.Player.Character
                 Local.Player.Character.Humanoid:Destroy()
@@ -137,7 +136,8 @@ host.Chatted:Connect(function(msg)
             end
         elseif args[1] == "!void" then
             local Target = SN(args[2])
-            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") then
+            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                Local.Backpack:FindFirstChild("Wallet") then
                 local HumClone = Local.Player.Character.Humanoid:Clone()
                 HumClone.Parent = Local.Player.Character
                 Local.Player.Character.Humanoid:Destroy()
@@ -166,7 +166,8 @@ host.Chatted:Connect(function(msg)
         if args[1] == "!bring" then
             local Target = SN(args[2])
             local Target2 = SN(args[3])
-            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") then
+            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                Local.Backpack:FindFirstChild("Wallet") then
                 local HumClone = Local.Player.Character.Humanoid:Clone()
                 HumClone.Parent = Local.Player.Character
                 Local.Player.Character.Humanoid:Destroy()
