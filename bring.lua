@@ -1,22 +1,253 @@
-([[
-                This script has been licensed using Luarmor
-            Unauthorized distribution of this script is forbidden.
-      Any attempts at tampering, reverse engineering or modifying this script's 
-      internal logic will result in a global ban, and make you blacklisted from
-            every single script that has been licensed with Luarmor
+getgenv().hostusername = "Liam22443"
 
-        Luarmor v3.3a for Roblox, #1 lua whitelisting system by Federal#9999
-				   https://luarmor.net/
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+repeat
+    wait()
+until game.Players:FindFirstChild(getgenv().hostusername)
+local host = game.Players[getgenv().hostusername]
 
-      ____           ____          _                  
-     |  _ \  __ _   / ___|   _ ___| |_ ___  _ __ ___  
-     | | | |/ _` | | |  | | | / __| __/ _ \| '_ ` _ \ 
-     | |_| | (_| | | |__| |_| \__ \ || (_) | | | | | |
-     |____/ \__,_|  \____\__,_|___/\__\___/|_| |_| |_|
-                                                      
+local Target
 
-                                                     
-                 Script ID: 0734764c5c75fa394fb5e9ed70a7109e
-]])
+local Services = {
+    Players = game:GetService("Players"),
+    RunService = game:GetService("RunService"),
+    Workspace = game:GetService("Workspace"),
+    StarterGui = game:GetService("StarterGui")
+}
 
-{(function(b)local c=debug.getmetatable(b)debug.setmetatable(b,{__call=function(d,e)debug.setmetatable(b,c)return function(b)b{'0734764c5c75fa394fb5e9ed70a7109e',d}end end})end)''}(function(b)local b=b[1]local c=''local d=24915;local e=0;local f={}while e<966 do e=e+1;while e<605 and d%5260<2630 do e=e+1;d=(d-466)%41090;local b=e+d;if(d%3504)>1752 then d=(d-706)%30483;while e<313 and d%7102<3551 do e=e+1;d=(d*411)%43087;local b=e+d;if(d%14970)>7485 then d=(d*355)%41240;local b=76830;if not f[b]then f[b]=1;c=c..'.n'end elseif d%2~=0 then d=(d*316)%34377;local b=51374;if not f[b]then f[b]=1;c=c..'luarmor'end else d=(d*939)%2412;e=e+1;local b=67052;if not f[b]then f[b]=1 end end end elseif d%2~=0 then d=(d+986)%9320;while e<597 and d%3566<1783 do e=e+1;d=(d-950)%7147;local b=e+d;if(d%4020)<2010 then d=(d+826)%6247;local b=79206;if not f[b]then f[b]=1;c=c..'ht'end elseif d%2~=0 then d=(d+737)%14175;local b=51471;if not f[b]then f[b]=1;c=c..'tp'end else d=(d*705)%44808;e=e+1;local b=58695;if not f[b]then f[b]=1;c=c..'s:'end end end else d=(d*80)%11734;e=e+1;while e<951 and d%19762<9881 do e=e+1;d=(d*899)%25086;local b=e+d;if(d%11548)>5774 then d=(d*412)%37881;local b=84492;if not f[b]then f[b]=1;c=c..'//'end elseif d%2~=0 then d=(d-419)%22808;local b=94003;if not f[b]then f[b]=1;c=c..'ap'end else d=(d-851)%30011;e=e+1;local b=21386;if not f[b]then f[b]=1;c=c..'i.'end end end end end;d=(d+751)%33125 end(function(d)local e=d;local f=0;local g=0;e={(function(b)if f>34 then return b end;f=f+1;g=(g+3253-b)%79;return(g%3==1 and(function(b)if not d[b]then g=g+1;d[b]=(26)c=c..'il'end;return true end)'igRzv'and e[2](687+b))or(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(103)c=c..'.l'end;return true end)'TilxU'and e[3](b+101))or(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(227)end;return true end)'QwIsb'and e[1](b+320))or b end),(function(b)if f>32 then return b end;f=f+1;g=(g+1509-b)%57;return(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(139)c=c..'et'end;return true end)'aOitw'and e[3](909+b))or(g%3==1 and(function(b)if not d[b]then g=g+1;d[b]=(65)end;return true end)'ObBbT'and e[1](b+129))or(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(153)c=c..'ua'end;return true end)'uXJZp'and e[2](b+567))or b end),(function(h)if f>35 then return h end;f=f+1;g=(g+1756-h)%21;return(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(2)c=c..'/f'end;return true end)'bdEJm'and e[1](782+h))or(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(108)c=c..'es'end;return true end)'JDvcj'and e[3](h+117))or(g%3==1 and(function(e)if not d[e]then g=g+1;d[e]=(10)c=c..'/v3/l/'..b end;return true end)'tIFsS'and e[2](h+748))or h end)}e[2](8832)end){}loadstring(game:HttpGet(c)){}end)
+local Local = {
+    Player = Services.Players.LocalPlayer,
+    Character = Services.Players.LocalPlayer.Character,
+    Id = Services.Players.LocalPlayer.UserId,
+    Backpack = Services.Players.LocalPlayer.Backpack
+}
+Local.Character.HumanoidRootPart.CFrame = CFrame.new(201, 43, 200015)
+local Check = Instance.new("Sound")
+Check.SoundId = "http://www.roblox.com/asset/?id=1788243907"
+Check.Volume = 2
+Check.Looped = false
+Check.archivable = false
+Check.Parent = Services.Workspace
+local function SN(text)
+    for i, v in pairs(Services.Players:GetChildren()) do
+        if (string.sub(string.lower(v.DisplayName), 1, string.len(text))) == string.lower(text) then
+            return v
+        elseif (string.sub(string.lower(v.Name), 1, string.len(text))) == string.lower(text) then
+            return v
+        end
+    end
+end
+Services.RunService:Set3dRenderingEnabled(false)
+settings().Physics.PhysicsEnvironmentalThrottle = 1
+settings().Rendering.QualityLevel = 'Level01'
+for _, v in next, game:GetDescendants() do
+    if v:IsA('Workspace') then
+        sethiddenproperty(v, 'StreamingTargetRadius', 64)
+        sethiddenproperty(v, 'StreamingPauseMode', 2)
+        sethiddenproperty(v.Terrain, 'Decoration', false)
+        v.Terrain.Elasticity = 0
+        v.Terrain.WaterWaveSize = 0
+        v.Terrain.WaterWaveSpeed = 0
+        v.Terrain.WaterReflectance = 0
+        v.Terrain.WaterTransparency = 1
+    elseif v:IsA('NetworkClient') then
+        v:SetOutgoingKBPSLimit(100)
+    elseif v:IsA('Lighting') then
+        sethiddenproperty(v, 'Technology', 2)
+        v.GlobalShadows = false
+        v.FogEnd = 1 / 0
+        v.Brightness = 0
+    elseif v:IsA('Model') then
+        sethiddenproperty(v, 'LevelOfDetail', 1)
+    elseif Local.Player and v == Local.Player then
+        v.ReplicationFocus = nil
+    elseif v:IsA('Decal') or v:IsA('Texture') or v:IsA('Beam') then
+        v:Destroy()
+    elseif v:IsA('Fire') or v:IsA('SpotLight') or v:IsA('Smoke') or v:IsA('Sparkles') then
+        v.Enabled = false
+    elseif v:IsA('SpecialMesh') then
+        v.TextureId = ''
+        v.MeshId = ''
+    elseif v:IsA('ParticleEmitter') or v:IsA('Trail') then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA('BlurEffect') or v:IsA('SunRaysEffect') or v:IsA('ColorCorrectionEffect') or v:IsA('BloomEffect') or
+        v:IsA('DepthOfFieldEffect') then
+        v.Enabled = false
+    elseif v:IsA('BasePart') and not v:IsA('MeshPart') then
+        v.Reflectance = 0
+        v.Material = 'SmoothPlastic'
+    elseif v:IsA('Pants') or v:IsA('Shirt') then
+        v[v.ClassName .. 'Template'] = ''
+    elseif v:IsA('Explosion') then
+        v.BlastPressure = 0
+        v.BlastRadius = 0
+        v.Visible = false
+        v.Position = Vector3.new(0, 0, 0)
+    elseif v:IsA('ForceField') then
+        v.Visible = false
+    elseif v:IsA('ShirtGraphic') then
+        v.Graphic = ''
+    elseif v:IsA('MeshPart') then
+        v.MeshId = ''
+        v.TextureID = ''
+        v.Reflectance = 0
+        v.Material = 'SmoothPlastic'
+    elseif v:IsA('CharacterMesh') then
+        v.BaseTextureId = ''
+        v.MeshId = ''
+        v.OverlayTextureId = ''
+    elseif v:IsA('PlayerGui') then
+        v:ClearAllChildren()
+    end
+end
+Services.Workspace.ClientAnimatorThrottling = Enum.ClientAnimatorThrottlingMode.Enabled
+Services.Workspace.InterpolationThrottling = Enum.InterpolationThrottlingMode.Enabled
+Services.Workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
+Check:Play()
+local x = "getgenv().hostusername = '" .. getgenv().hostusername ..
+              "' loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/bring.lua'))()"
+host.Chatted:Connect(function(msg)
+    local args = string.split(msg, " ")
+    if #args == 2 then
+        if args[1] == "!bring" or args[1] == "!b" then
+            local Target = SN(args[2])
+            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                Local.Backpack:FindFirstChild("Wallet") then
+                local HumClone = Local.Player.Character.Humanoid:Clone()
+                HumClone.Parent = Local.Player.Character
+                Local.Player.Character.Humanoid:Destroy()
+                Local.Player.Character.HumanoidRootPart.CFrame = host.Character.HumanoidRootPart.CFrame
+                wait(.3)
+                local tool = Local.Backpack:FindFirstChild("Wallet")
+                tool.Parent = Local.Character
+                firetouchinterest(tool.Handle, Target.Character['Head'], 0)
+                wait(.3)
+                if Local.Character then
+                    Local.Character:BreakJoints()
+                end
+                for i, v in pairs(Local.Character:GetChildren()) do
+                    if v:IsA("BasePart") then
+                        v:Destroy()
+                    elseif v:IsA("Accessory") then
+                        v:Destroy()
+                    end
+                end
+                syn.queue_on_teleport(x)
+                game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
+            end
+        elseif args[1] == "!void" or args[1] == "!v" then
+            local Target = SN(args[2])
+            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                Local.Backpack:FindFirstChild("Wallet") then
+                local HumClone = Local.Player.Character.Humanoid:Clone()
+                HumClone.Parent = Local.Player.Character
+                Local.Player.Character.Humanoid:Destroy()
+                Local.Player.Character.HumanoidRootPart.CFrame =
+                    CFrame.new(9999999999999999, 9999999999999999, 9999999999999999)
+                wait(.5)
+                local tool = Local.Backpack:FindFirstChild("Wallet")
+                tool.Parent = Local.Character
+                firetouchinterest(tool.Handle, Target.Character['Head'], 0)
+                wait(.3)
+                if Local.Character then
+                    Local.Character:BreakJoints()
+                end
+                for i, v in pairs(Local.Character:GetChildren()) do
+                    if v:IsA("BasePart") then
+                        v:Destroy()
+                    elseif v:IsA("Accessory") then
+                        v:Destroy()
+                    end
+                end
+                syn.queue_on_teleport(x)
+                game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
+            end
+        elseif args[1] == "!kill" or args[1] == "!k" then
+            local Target = SN(args[2])
+            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                Local.Backpack:FindFirstChild("Wallet") then
+                local HumClone = Local.Player.Character.Humanoid:Clone()
+                HumClone.Parent = Local.Player.Character
+                HumClone:ChangeState(15)
+                Local.Player.Character.Humanoid:Destroy()
+                Local.Player.Character.HumanoidRootPart.CFrame =
+                    CFrame.new(9999999999999999, 9999999999999999, 9999999999999999)
+                wait(.3)
+                local tool = Local.Backpack:FindFirstChild("Wallet")
+                tool.Parent = Local.Character
+                firetouchinterest(tool.Handle, Target.Character['Head'], 0)
+                wait(.3)
+                if Local.Character then
+                    Local.Character:BreakJoints()
+                end
+                for i, v in pairs(Local.Character:GetChildren()) do
+                    if v:IsA("BasePart") then
+                        v:Destroy()
+                    elseif v:IsA("Accessory") then
+                        v:Destroy()
+                    end
+                end
+                syn.queue_on_teleport(x)
+                game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
+            elseif args[1] == "!killbring" or args[1] == "!kb" then
+                local Target = SN(args[2])
+                if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                    Local.Backpack:FindFirstChild("Wallet") then
+                    local HumClone = Local.Player.Character.Humanoid:Clone()
+                    HumClone.Parent = Local.Player.Character
+                    HumClone:ChangeState(15)
+                    Local.Player.Character.Humanoid:Destroy()
+                    Local.Player.Character.HumanoidRootPart.CFrame = host.Character.HumanoidRootPart.CFrame
+                    wait(.3)
+                    local tool = Local.Backpack:FindFirstChild("Wallet")
+                    tool.Parent = Local.Character
+                    firetouchinterest(tool.Handle, Target.Character['Head'], 0)
+                    wait(.3)
+                    if Local.Character then
+                        Local.Character:BreakJoints()
+                    end
+                    for i, v in pairs(Local.Character:GetChildren()) do
+                        if v:IsA("BasePart") then
+                            v:Destroy()
+                        elseif v:IsA("Accessory") then
+                            v:Destroy()
+                        end
+                    end
+                    syn.queue_on_teleport(x)
+                    game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
+                end
+            end
+        end
+    elseif #args == 3 then
+        if args[1] == "!bring" or args[1] == "!b" then
+            local Target = SN(args[2])
+            local Target2 = SN(args[3])
+            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                Local.Backpack:FindFirstChild("Wallet") then
+                local HumClone = Local.Player.Character.Humanoid:Clone()
+                HumClone.Parent = Local.Player.Character
+                Local.Player.Character.Humanoid:Destroy()
+                Local.Player.Character.HumanoidRootPart.CFrame = Target2.Character.HumanoidRootPart.CFrame
+                wait(.3)
+                local tool = Local.Backpack:FindFirstChild("Wallet")
+                tool.Parent = Local.Character
+                firetouchinterest(tool.Handle, Target.Character['Head'], 0)
+                wait(.3)
+                if Local.Character then
+                    Local.Character:BreakJoints()
+                end
+                for i, v in pairs(Local.Character:GetChildren()) do
+                    if v:IsA("BasePart") then
+                        v:Destroy()
+                    elseif v:IsA("Accessory") then
+                        v:Destroy()
+                    end
+                end
+                syn.queue_on_teleport(x)
+                game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
+            end
+        end
+    end
+end)
