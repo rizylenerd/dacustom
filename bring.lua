@@ -1,5 +1,3 @@
-getgenv().hostusername = "Liam22443"
-
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -106,8 +104,7 @@ Services.Workspace.ClientAnimatorThrottling = Enum.ClientAnimatorThrottlingMode.
 Services.Workspace.InterpolationThrottling = Enum.InterpolationThrottlingMode.Enabled
 Services.Workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
 Check:Play()
-local x = "getgenv().hostusername = '" .. getgenv().hostusername ..
-              "' loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/bring.lua'))()"
+local x = "getgenv().hostusername = '" .. getgenv().hostusername .. "' loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/bring.lua'))()"
 host.Chatted:Connect(function(msg)
     local args = string.split(msg, " ")
     if #args == 2 then
