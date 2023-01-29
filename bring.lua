@@ -94,7 +94,7 @@ end
 Services.Workspace.ClientAnimatorThrottling = Enum.ClientAnimatorThrottlingMode.Enabled
 Services.Workspace.InterpolationThrottling = Enum.InterpolationThrottlingMode.Enabled
 Services.Workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
-local x = ("getgenv()." .. tostring(getgenv().hostusername) "loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()")
+local x = "getgenv()." .. getgenv().hostusername .. " loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()"
 host.Chatted:Connect(function(msg)
     local args = string.split(msg, " ")
     if args[1] == "!bring" then
