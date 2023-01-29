@@ -1,3 +1,5 @@
+getgenv().hostusername = "Liam22443"
+
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -21,7 +23,12 @@ local Local = {
     Id = Services.Players.LocalPlayer.UserId,
     Backpack = Services.Players.LocalPlayer.Backpack
 }
-
+local Check = Instance.new("Sound")
+Check.SoundId = "http://www.roblox.com/asset/?id=1788243907"
+Check.Volume = 2
+Check.Looped = false
+Check.archivable = false
+Check.Parent = Services.Workspace
 local function SN(text)
     for i, v in pairs(Services.Players:GetChildren()) do
         if (string.sub(string.lower(v.DisplayName), 1, string.len(text))) == string.lower(text) then
@@ -97,6 +104,7 @@ end
 Services.Workspace.ClientAnimatorThrottling = Enum.ClientAnimatorThrottlingMode.Enabled
 Services.Workspace.InterpolationThrottling = Enum.InterpolationThrottlingMode.Enabled
 Services.Workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
+Check:Play()
 local x = "getgenv().hostusername = '" .. getgenv().hostusername ..
               "' loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/bring.lua'))()"
 host.Chatted:Connect(function(msg)
@@ -135,7 +143,7 @@ host.Chatted:Connect(function(msg)
                 Local.Player.Character.Humanoid:Destroy()
                 Local.Player.Character.HumanoidRootPart.CFrame =
                     CFrame.new(9999999999999999, 9999999999999999, 9999999999999999)
-                wait(.3)
+                wait(.5)
                 local tool = Local.Backpack:FindFirstChild("Wallet")
                 tool.Parent = Local.Character
                 firetouchinterest(tool.Handle, Target.Character['Head'], 0)
