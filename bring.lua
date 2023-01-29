@@ -21,6 +21,18 @@ local Local = {
     Id = Services.Players.LocalPlayer.UserId,
     Backpack = Services.Players.LocalPlayer.Backpack
 }
+
+local remotes = {"CHECKER_1", "CHECKER_2", "TeleportDetect", "OneMoreTime", "BreathingHAMON", "VirusCough"}
+local __namecall
+__namecall = hookmetamethod(game, "__namecall", function(...)
+    local args = {...}
+    local method = getnamecallmethod()
+    if (method == "FireServer" and args[1].Name == "MainEvent" and table.find(remotes, args[2])) then
+        return
+    end
+    return __namecall(table.unpack(args))
+end)
+
 Local.Character.HumanoidRootPart.CFrame = CFrame.new(201, 43, 200015)
 local Check = Instance.new("Sound")
 Check.SoundId = "http://www.roblox.com/asset/?id=1788243907"
