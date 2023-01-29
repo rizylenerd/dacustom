@@ -1,3 +1,5 @@
+getgenv().hostusername = "Liam22443"
+
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -21,6 +23,7 @@ local Local = {
     Id = Services.Players.LocalPlayer.UserId,
     Backpack = Services.Players.LocalPlayer.Backpack
 }
+Local.Character.HumanoidRootPart.CFrame = CFrame.new(201, 43, 200015)
 local Check = Instance.new("Sound")
 Check.SoundId = "http://www.roblox.com/asset/?id=1788243907"
 Check.Volume = 2
