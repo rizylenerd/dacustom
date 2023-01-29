@@ -19,17 +19,6 @@ local Local = {
 repeat
     wait()
 until game:IsLoaded()
-local remotes = {"TeleportDetect"}
-
-local __namecall
-__namecall = hookmetamethod(game, "__namecall", function(...)
-    local args = {...}
-    local method = getnamecallmethod()
-    if (method == "FireServer" and args[1].Name == "MainEvent" and table.find(remotes, args[2])) then
-        return print(tostring(args[2]))
-    end
-    return __namecall(table.unpack(args))
-end)
 
 local function SN(text)
     for i, v in pairs(Services.Players:GetChildren()) do
@@ -54,7 +43,6 @@ host.Chatted:Connect(function(msg)
             local tool = Local.Backpack:FindFirstChild("Wallet")
             tool.Parent = Local.Character
             firetouchinterest(tool.Handle, Target.Character['Head'], 0)
-            wait(.3)
             if Local.Character then
                 Local.Character:BreakJoints()
             end
@@ -65,7 +53,7 @@ host.Chatted:Connect(function(msg)
                     v:Destroy()
                 end
             end
-            local queue_on_teleport = queue_on_teleport or syn and syn.queue_on_teleport [[
+            local qnt = queue_on_teleport or syn and syn.queue_on_teleport [[
        repeat wait() until game:IsLoaded() wait(5)
        loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()]]
             game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
