@@ -1,3 +1,5 @@
+getgenv().hostusername = "Liam22443"
+
 local host = game.Players[getgenv().hostusername]
 
 local Target
@@ -42,7 +44,7 @@ host.Chatted:Connect(function(msg)
             local tool = Local.Backpack:FindFirstChild("Wallet")
             tool.Parent = Local.Character
             firetouchinterest(tool.Handle, Target.Character['Head'], 0)
-            wait(.1)
+            wait(.2)
             if Local.Character then
                 Local.Character:BreakJoints()
             end
@@ -54,9 +56,7 @@ host.Chatted:Connect(function(msg)
                 end
             end
             local qnt = queue_on_teleport or syn and
-                            syn.queue_on_teleport "repeat wait() until game:IsLoaded() wait(5) getgenv().hostusername =" ..
-                            save ..
-                            "loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()"
+                            syn.queue_on_teleport "repeat wait() until game:IsLoaded() wait(5) getgenv().hostusername =" ..save .."loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()"
             game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
         end
     end
