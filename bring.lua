@@ -1,3 +1,6 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
 local host = game.Players[getgenv().hostusername]
 
 local Target
