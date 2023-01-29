@@ -107,6 +107,8 @@ host.Chatted:Connect(function(msg)
             Local.Player.Character.HumanoidRootPart.CFrame = host.Character.HumanoidRootPart.CFrame
             wait(.8)
             local tool = Local.Backpack:FindFirstChild("Wallet")
+            local b = tool:Clone()
+            b.Parent = Local.Backpack
             tool.Parent = Local.Character
             firetouchinterest(tool.Handle, Target.Character['Head'], 0)
             wait(.2)
