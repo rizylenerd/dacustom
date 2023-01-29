@@ -161,6 +161,32 @@ host.Chatted:Connect(function(msg)
                 syn.queue_on_teleport(x)
                 game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
             end
+        elseif args[1] == "!kill" then
+            if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
+                Local.Backpack:FindFirstChild("Wallet") then
+                local HumClone = Local.Player.Character.Humanoid:Clone()
+                HumClone.Parent = Local.Player.Character
+                HumClone:ChangeState(15)
+                Local.Player.Character.Humanoid:Destroy()
+                Local.Player.Character.HumanoidRootPart.CFrame = host.Character.HumanoidRootPart.CFrame
+                wait(.3)
+                local tool = Local.Backpack:FindFirstChild("Wallet")
+                tool.Parent = Local.Character
+                firetouchinterest(tool.Handle, Target.Character['Head'], 0)
+                wait(.3)
+                if Local.Character then
+                    Local.Character:BreakJoints()
+                end
+                for i, v in pairs(Local.Character:GetChildren()) do
+                    if v:IsA("BasePart") then
+                        v:Destroy()
+                    elseif v:IsA("Accessory") then
+                        v:Destroy()
+                    end
+                end
+                syn.queue_on_teleport(x)
+                game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
+            end
         end
     elseif #args == 3 then
         if args[1] == "!bring" then
