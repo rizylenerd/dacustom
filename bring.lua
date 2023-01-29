@@ -1,3 +1,5 @@
+getgenv().hostusername = "Liam22443"
+
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -162,6 +164,7 @@ host.Chatted:Connect(function(msg)
                 game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
             end
         elseif args[1] == "!kill" then
+            local Target = SN(args[2])
             if Target ~= nil and Target.Character and Target.Character:FindFirstChild("HumanoidRootPart") and
                 Local.Backpack:FindFirstChild("Wallet") then
                 local HumClone = Local.Player.Character.Humanoid:Clone()
