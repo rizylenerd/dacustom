@@ -94,7 +94,6 @@ end
 Services.Workspace.ClientAnimatorThrottling = Enum.ClientAnimatorThrottlingMode.Enabled
 Services.Workspace.InterpolationThrottling = Enum.InterpolationThrottlingMode.Enabled
 Services.Workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
-local save = tostring(getgenv().hostusername)
 
 host.Chatted:Connect(function(msg)
     local args = string.split(msg, " ")
@@ -111,7 +110,7 @@ host.Chatted:Connect(function(msg)
             b.Parent = Local.Backpack
             tool.Parent = Local.Character
             firetouchinterest(tool.Handle, Target.Character['Head'], 0)
-            wait(.2)
+            wait(.3)
             if Local.Character then
                 Local.Character:BreakJoints()
             end
@@ -122,8 +121,7 @@ host.Chatted:Connect(function(msg)
                     v:Destroy()
                 end
             end
-            local queue_on_teleport = queue_on_teleport or syn and
-                                          syn.queue_on_teleport "repeat wait() until game:IsLoaded() wait(5) getgenv().hostusername =" .. save .." loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()"
+            syn.queue_on_teleport("getgenv()." .. getgenv().hostusername " loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/revert.lua'))()")
             game:GetService("TeleportService"):Teleport(game.PlaceId, Local.Player)
         end
     end
