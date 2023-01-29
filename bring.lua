@@ -1,4 +1,3 @@
-
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -117,7 +116,8 @@ Services.Workspace.ClientAnimatorThrottling = Enum.ClientAnimatorThrottlingMode.
 Services.Workspace.InterpolationThrottling = Enum.InterpolationThrottlingMode.Enabled
 Services.Workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
 Check:Play()
-local x = "getgenv().hostusername = '" .. getgenv().hostusername .. "' loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/bring.lua'))()"
+local x = "getgenv().hostusername = '" .. getgenv().hostusername ..
+              "' loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/bring.lua'))()"
 host.Chatted:Connect(function(msg)
     local args = string.split(msg, " ")
     if #args == 2 then
@@ -182,8 +182,7 @@ host.Chatted:Connect(function(msg)
                 HumClone.Parent = Local.Player.Character
                 HumClone:ChangeState(15)
                 Local.Player.Character.Humanoid:Destroy()
-                Local.Player.Character.HumanoidRootPart.CFrame =
-                    CFrame.new(9999999999999999, 9999999999999999, 9999999999999999)
+                Local.Player.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
                 wait(.3)
                 local tool = Local.Backpack:FindFirstChild("Wallet")
                 tool.Parent = Local.Character
