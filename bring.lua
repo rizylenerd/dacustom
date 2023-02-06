@@ -1,3 +1,5 @@
+getgenv().hostusername = "RuneIsAboveYou"
+
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -79,7 +81,7 @@ Local.Character.HumanoidRootPart.CFrame = CFrame.new(201, 43, 200015)
 
 Services.RunService:Set3dRenderingEnabled(false)
 
-local x = "script_key = '" .. script_key .. "' getgenv().hostusername = '" .. getgenv().hostusername ..
+local x = "' getgenv().hostusername = '" .. getgenv().hostusername ..
               "' loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/bring.lua'))()"
 
 host.Chatted:Connect(function(msg)
