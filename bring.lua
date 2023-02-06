@@ -77,6 +77,8 @@ end)
 
 Local.Character.HumanoidRootPart.CFrame = CFrame.new(201, 43, 200015)
 
+Services.RunService:Set3dRenderingEnabled(false)
+
 local x = "script_key = '" .. script_key .. "' getgenv().hostusername = '" .. getgenv().hostusername ..
               "' loadstring(game:HttpGet('https://raw.githubusercontent.com/rizylenerd/dacustom/main/bring.lua'))()"
 
